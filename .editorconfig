@@ -1,0 +1,4 @@
+﻿[*.cs]
+
+# IDE0023: Usar cuerpo del bloque para el operador de conversión
+csharp_style_expression_bodied_operators = true
