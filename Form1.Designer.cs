@@ -266,12 +266,11 @@
             this.FechaRegistro.TabIndex = 19;
             // 
             // CbEmpresa
-            //
+            // 
             this.CbEmpresa.FormattingEnabled = true;
             this.CbEmpresa.Items.AddRange(new object[] {
             "si",
             "no"});
-            this.CbEmpresa.FormattingEnabled = true;
             this.CbEmpresa.Location = new System.Drawing.Point(189, 114);
             this.CbEmpresa.Name = "CbEmpresa";
             this.CbEmpresa.Size = new System.Drawing.Size(144, 24);
