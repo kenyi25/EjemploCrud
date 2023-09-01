@@ -51,8 +51,8 @@
             this.txtCantidadFacturas = new System.Windows.Forms.TextBox();
             this.txtNumeroUltimaFactura = new System.Windows.Forms.TextBox();
             this.txtMontoUltimaFactura = new System.Windows.Forms.TextBox();
-            this.txtEsEmpresa = new System.Windows.Forms.TextBox();
             this.FechaRegistro = new System.Windows.Forms.DateTimePicker();
+            this.CbEmpresa = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,7 +75,6 @@
             this.label2.Size = new System.Drawing.Size(78, 16);
             this.label2.TabIndex = 0;
             this.label2.Text = "EsEmpresa";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -86,7 +85,6 @@
             this.label3.Size = new System.Drawing.Size(61, 16);
             this.label3.TabIndex = 0;
             this.label3.Text = "Telefono";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // btnLimpiar
             // 
@@ -108,6 +106,7 @@
             this.btnGuardar.TabIndex = 3;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnModificar
             // 
@@ -163,7 +162,6 @@
             this.label6.Size = new System.Drawing.Size(64, 16);
             this.label6.TabIndex = 0;
             this.label6.Text = "Direccion";
-            this.label6.Click += new System.EventHandler(this.label3_Click);
             // 
             // label7
             // 
@@ -174,7 +172,6 @@
             this.label7.Size = new System.Drawing.Size(96, 16);
             this.label7.TabIndex = 0;
             this.label7.Text = "FechaRegistro";
-            this.label7.Click += new System.EventHandler(this.label3_Click);
             // 
             // label8
             // 
@@ -185,7 +182,6 @@
             this.label8.Size = new System.Drawing.Size(113, 16);
             this.label8.TabIndex = 0;
             this.label8.Text = "CantidadFacturas";
-            this.label8.Click += new System.EventHandler(this.label3_Click);
             // 
             // label9
             // 
@@ -196,7 +192,6 @@
             this.label9.Size = new System.Drawing.Size(127, 16);
             this.label9.TabIndex = 0;
             this.label9.Text = "MontoUltimaFactura";
-            this.label9.Click += new System.EventHandler(this.label3_Click);
             // 
             // label10
             // 
@@ -207,7 +202,6 @@
             this.label10.Size = new System.Drawing.Size(138, 16);
             this.label10.TabIndex = 0;
             this.label10.Text = "NumeroUltimaFactura";
-            this.label10.Click += new System.EventHandler(this.label3_Click);
             // 
             // txtRut
             // 
@@ -264,13 +258,6 @@
             this.txtMontoUltimaFactura.Size = new System.Drawing.Size(144, 22);
             this.txtMontoUltimaFactura.TabIndex = 16;
             // 
-            // txtEsEmpresa
-            // 
-            this.txtEsEmpresa.Location = new System.Drawing.Point(189, 114);
-            this.txtEsEmpresa.Name = "txtEsEmpresa";
-            this.txtEsEmpresa.Size = new System.Drawing.Size(144, 22);
-            this.txtEsEmpresa.TabIndex = 18;
-            // 
             // FechaRegistro
             // 
             this.FechaRegistro.Location = new System.Drawing.Point(189, 246);
@@ -278,13 +265,25 @@
             this.FechaRegistro.Size = new System.Drawing.Size(144, 22);
             this.FechaRegistro.TabIndex = 19;
             // 
+            // CbEmpresa
+            //
+            this.CbEmpresa.FormattingEnabled = true;
+            this.CbEmpresa.Items.AddRange(new object[] {
+            "si",
+            "no"});
+            this.CbEmpresa.FormattingEnabled = true;
+            this.CbEmpresa.Location = new System.Drawing.Point(189, 114);
+            this.CbEmpresa.Name = "CbEmpresa";
+            this.CbEmpresa.Size = new System.Drawing.Size(144, 24);
+            this.CbEmpresa.TabIndex = 20;
+            // 
             // txtFechaRegistro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1452, 572);
+            this.Controls.Add(this.CbEmpresa);
             this.Controls.Add(this.FechaRegistro);
-            this.Controls.Add(this.txtEsEmpresa);
             this.Controls.Add(this.txtMontoUltimaFactura);
             this.Controls.Add(this.txtNumeroUltimaFactura);
             this.Controls.Add(this.txtCantidadFacturas);
@@ -309,7 +308,6 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "txtFechaRegistro";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgUsuarios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -340,8 +338,8 @@
         private System.Windows.Forms.TextBox txtCantidadFacturas;
         private System.Windows.Forms.TextBox txtNumeroUltimaFactura;
         private System.Windows.Forms.TextBox txtMontoUltimaFactura;
-        private System.Windows.Forms.TextBox txtEsEmpresa;
         private System.Windows.Forms.DateTimePicker FechaRegistro;
+        private System.Windows.Forms.ComboBox CbEmpresa;
     }
 }
 
